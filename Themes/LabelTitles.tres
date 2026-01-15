@@ -1,0 +1,8 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://bnr8x3yfeavfk"]
+
+[ext_resource type="FontFile" uid="uid://ctyjjpfc1nhqq" path="res://Fonts/RobotoMono-Bold.ttf" id="1_5i4sw"]
+
+[resource]
+Label/colors/font_color = Color(5.390644e-06, 0.9943653, 0.9630926, 1)
+Label/font_sizes/font_size = 20
+Label/fonts/font = ExtResource("1_5i4sw")

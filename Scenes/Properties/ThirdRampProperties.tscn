@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgnhwf44mi210"]
+
+[ext_resource type="Script" uid="uid://bncs35dhtqt85" path="res://Scripts/Classes/third_ramp_properties.gd" id="1_nv675"]
+
+[node name="ThirdRampProperties" type="Node"]
+script = ExtResource("1_nv675")

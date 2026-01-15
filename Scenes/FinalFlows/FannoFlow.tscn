@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://njasetr3wj3s"]
+
+[ext_resource type="Script" uid="uid://gylm1a6gt627" path="res://Scripts/Classes/fanno_flow.gd" id="1_2b3ei"]
+
+[node name="FannoFlow" type="Node"]
+script = ExtResource("1_2b3ei")

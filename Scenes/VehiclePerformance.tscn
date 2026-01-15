@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2qnocje8r6ro"]
+
+[ext_resource type="Script" uid="uid://d36ev5jxw6fp1" path="res://Scripts/Classes/vehicle_performance.gd" id="1_wf23g"]
+
+[node name="VehiclePerformance" type="Node"]
+script = ExtResource("1_wf23g")

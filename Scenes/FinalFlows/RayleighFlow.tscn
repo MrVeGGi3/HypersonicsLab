@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba5j0xmjb04xc"]
+
+[ext_resource type="Script" uid="uid://bf545g56k76mn" path="res://Scripts/Classes/rayleigh_flow.gd" id="1_out0t"]
+
+[node name="RayleighFlow" type="Node"]
+script = ExtResource("1_out0t")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvltcelkp17g1"]
+
+[ext_resource type="Script" uid="uid://cdy7dq2h8k2k7" path="res://Scripts/Classes/vehicle_properties.gd" id="1_lgaub"]
+
+[node name="VehicleProperties" type="Node"]
+script = ExtResource("1_lgaub")

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpedeex6s107x"]
+
+[ext_resource type="Script" uid="uid://dt4yutn7ht1m7" path="res://Scripts/Classes/properties.gd" id="1_41fn6"]
+
+[node name="EntryProperties" type="Node"]
+script = ExtResource("1_41fn6")

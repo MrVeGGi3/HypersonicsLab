@@ -1,0 +1,419 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi3d1i5djda0p"]
+
+[ext_resource type="FontFile" uid="uid://ctyjjpfc1nhqq" path="res://Fonts/RobotoMono-Bold.ttf" id="1_2xqae"]
+[ext_resource type="Script" uid="uid://1v4jhuwp2rf0" path="res://Scripts/lab_results.gd" id="1_fodp3"]
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_l7eae"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fodp3"]
+bg_color = Color(0, 0.6901961, 0.6666667, 1)
+
+[node name="LabResults" type="Control" node_paths=PackedStringArray("atmo_height", "mach_number", "temperature", "pressure", "density", "stag_temp", "stag_press", "flow_velocity", "theta_1", "beta_1", "ramp_1_mach_number", "ramp_1_temperature", "ramp_1_pressure", "ramp_1_density", "ramp_1_stag_temp", "ramp_1_stag_press", "ramp_1_flow_velocity", "theta_2", "beta_2", "ramp_2_mach_number", "ramp_2_temperature", "ramp_2_pressure", "ramp_2_density", "ramp_2_stag_temp", "ramp_2_stag_press", "ramp_2_flow_velocity", "theta_3", "beta_3", "ramp_3_mach_number", "ramp_3_temperature", "ramp_3_pressure", "ramp_3_density", "ramp_3_stag_temp", "ramp_3_stag_press", "ramp_3_flow_velocity", "fanno_mach_number", "fanno_temperature", "fanno_pressure", "fanno_density", "fanno_stag_temp", "fanno_stag_press", "rayleigh_mach_number", "rayleigh_temperature", "rayleigh_pressure", "rayleigh_density", "rayleigh_stag_temp", "rayleigh_stag_press", "rayleigh_flow_velocity", "exit_mach_number", "exit_temperature", "exit_pressure", "exit_density", "exit_stag_temp", "exit_stag_press", "exit_flow_velocity", "thrust_generated", "drag", "net_thrust")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fodp3")
+atmo_height = NodePath("Properties/Row 1/AtmosphereProperties/Height")
+mach_number = NodePath("Properties/Row 1/AtmosphereProperties/MachNumber")
+temperature = NodePath("Properties/Row 1/AtmosphereProperties/AtmoTemperatureLabel")
+pressure = NodePath("Properties/Row 1/AtmosphereProperties/AtmoPressureLabel")
+density = NodePath("Properties/Row 1/AtmosphereProperties/AtmoDensityLabel")
+stag_temp = NodePath("Properties/Row 1/AtmosphereProperties/AtmoStagTemperature")
+stag_press = NodePath("Properties/Row 1/AtmosphereProperties/AtmoStagPressure")
+flow_velocity = NodePath("Properties/Row 1/AtmosphereProperties/Flow Velocity")
+theta_1 = NodePath("Properties/Row 1/Ramp1/Theta_1")
+beta_1 = NodePath("Properties/Row 1/Ramp1/Beta_1")
+ramp_1_mach_number = NodePath("Properties/Row 1/Ramp1/MachNumber")
+ramp_1_temperature = NodePath("Properties/Row 1/Ramp1/Ramp1Temperature")
+ramp_1_pressure = NodePath("Properties/Row 1/Ramp1/Ramp1Pressure")
+ramp_1_density = NodePath("Properties/Row 1/Ramp1/Ramp1Density")
+ramp_1_stag_temp = NodePath("Properties/Row 1/Ramp1/Ramp1StagTemperature")
+ramp_1_stag_press = NodePath("Properties/Row 1/Ramp1/Ramp1StagPressure")
+ramp_1_flow_velocity = NodePath("Properties/Row 1/Ramp1/Flow Velocity")
+theta_2 = NodePath("Properties/Row 1/Ramp2/Theta_2")
+beta_2 = NodePath("Properties/Row 1/Ramp2/Beta_2")
+ramp_2_mach_number = NodePath("Properties/Row 1/Ramp2/MachNumber")
+ramp_2_temperature = NodePath("Properties/Row 1/Ramp2/Ramp2Temperature")
+ramp_2_pressure = NodePath("Properties/Row 1/Ramp2/Ramp2Pressure")
+ramp_2_density = NodePath("Properties/Row 1/Ramp2/Ramp2Density")
+ramp_2_stag_temp = NodePath("Properties/Row 1/Ramp2/Ramp2StagTemperature")
+ramp_2_stag_press = NodePath("Properties/Row 1/Ramp2/Ramp2StagPressure")
+ramp_2_flow_velocity = NodePath("Properties/Row 1/Ramp2/Flow Velocity")
+theta_3 = NodePath("Properties/Row 1/Ramp3/Theta_3")
+beta_3 = NodePath("Properties/Row 1/Ramp3/Beta_3")
+ramp_3_mach_number = NodePath("Properties/Row 1/Ramp3/MachNumber")
+ramp_3_temperature = NodePath("Properties/Row 1/Ramp3/Ramp3Temperature")
+ramp_3_pressure = NodePath("Properties/Row 1/Ramp3/Ramp3Pressure")
+ramp_3_density = NodePath("Properties/Row 1/Ramp3/Ramp3Density")
+ramp_3_stag_temp = NodePath("Properties/Row 1/Ramp3/Ramp3StagTemperature")
+ramp_3_stag_press = NodePath("Properties/Row 1/Ramp3/Ramp3StagPressure")
+ramp_3_flow_velocity = NodePath("Properties/Row 1/Ramp3/Flow Velocity")
+fanno_mach_number = NodePath("Properties/Row 2/FannoFlow/MachNumber")
+fanno_temperature = NodePath("Properties/Row 2/FannoFlow/FannoTemperature")
+fanno_pressure = NodePath("Properties/Row 2/FannoFlow/FannoPressure")
+fanno_density = NodePath("Properties/Row 2/FannoFlow/FannoDensity")
+fanno_stag_temp = NodePath("Properties/Row 2/FannoFlow/FannoStagTemperature")
+fanno_stag_press = NodePath("Properties/Row 2/FannoFlow/FannoStagPressure")
+rayleigh_mach_number = NodePath("Properties/Row 2/RayleighFlow/MachNumber")
+rayleigh_temperature = NodePath("Properties/Row 2/RayleighFlow/RayleighTemperature")
+rayleigh_pressure = NodePath("Properties/Row 2/RayleighFlow/RayleighPressure")
+rayleigh_density = NodePath("Properties/Row 2/RayleighFlow/RayçeighDensity")
+rayleigh_stag_temp = NodePath("Properties/Row 2/RayleighFlow/RayleighStagTemperature")
+rayleigh_stag_press = NodePath("Properties/Row 2/RayleighFlow/RayleighStagPressure")
+rayleigh_flow_velocity = NodePath("Properties/Row 2/RayleighFlow/Flow Velocity")
+exit_mach_number = NodePath("Properties/Row 2/ExitProperties/MachNumber")
+exit_temperature = NodePath("Properties/Row 2/ExitProperties/FannoTemperature")
+exit_pressure = NodePath("Properties/Row 2/ExitProperties/FannoPressure")
+exit_density = NodePath("Properties/Row 2/ExitProperties/FannoDensity")
+exit_stag_temp = NodePath("Properties/Row 2/ExitProperties/FannoStagTemperature")
+exit_stag_press = NodePath("Properties/Row 2/ExitProperties/FannoStagPressure")
+exit_flow_velocity = NodePath("Properties/Row 2/ExitProperties/Flow Velocity")
+thrust_generated = NodePath("Performance/ThrustGenerated")
+drag = NodePath("Performance/Drag")
+net_thrust = NodePath("Performance/Net Thrust")
+
+[node name="Properties" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 554.0
+offset_bottom = 435.0
+
+[node name="Row 1" type="HBoxContainer" parent="Properties"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="AtmosphereProperties" type="VBoxContainer" parent="Properties/Row 1"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Atmo Properties"
+horizontal_alignment = 1
+
+[node name="Height" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Height: "
+
+[node name="MachNumber" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="AtmoTemperatureLabel" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="AtmoPressureLabel" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="AtmoDensityLabel" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Density: "
+
+[node name="AtmoStagTemperature" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="AtmoStagPressure" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 1/AtmosphereProperties"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="Ramp1" type="VBoxContainer" parent="Properties/Row 1"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Ramp 1"
+horizontal_alignment = 1
+
+[node name="Theta_1" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Theta 1:"
+
+[node name="Beta_1" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Beta 1:"
+
+[node name="MachNumber" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="Ramp1Temperature" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="Ramp1Pressure" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="Ramp1Density" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Density: "
+
+[node name="Ramp1StagTemperature" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="Ramp1StagPressure" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 1/Ramp1"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="Ramp2" type="VBoxContainer" parent="Properties/Row 1"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Ramp 2"
+horizontal_alignment = 1
+
+[node name="Theta_2" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Height: "
+
+[node name="Beta_2" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Beta 2:"
+
+[node name="MachNumber" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="Ramp2Temperature" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="Ramp2Pressure" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="Ramp2Density" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Density: "
+
+[node name="Ramp2StagTemperature" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="Ramp2StagPressure" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 1/Ramp2"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="Ramp3" type="VBoxContainer" parent="Properties/Row 1"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Ramp 3"
+horizontal_alignment = 1
+
+[node name="Theta_3" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Theta 3:"
+
+[node name="Beta_3" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Beta 3:"
+
+[node name="MachNumber" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="Ramp3Temperature" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="Ramp3Pressure" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="Ramp3Density" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Density: "
+
+[node name="Ramp3StagTemperature" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="Ramp3StagPressure" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 1/Ramp3"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="Row 2" type="HBoxContainer" parent="Properties"]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FannoFlow" type="VBoxContainer" parent="Properties/Row 2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Fanno Flow"
+horizontal_alignment = 1
+
+[node name="MachNumber" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="FannoTemperature" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="FannoPressure" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="FannoDensity" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Density: "
+
+[node name="FannoStagTemperature" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="FannoStagPressure" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 2/FannoFlow"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="RayleighFlow" type="VBoxContainer" parent="Properties/Row 2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Rayleigh Flow"
+horizontal_alignment = 1
+
+[node name="MachNumber" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="RayleighTemperature" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="RayleighPressure" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="RayçeighDensity" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Density: "
+
+[node name="RayleighStagTemperature" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="RayleighStagPressure" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 2/RayleighFlow"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="ExitProperties" type="VBoxContainer" parent="Properties/Row 2"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+theme = ExtResource("1_l7eae")
+text = "Exit Properties"
+horizontal_alignment = 1
+
+[node name="MachNumber" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Mach Number: "
+
+[node name="FannoTemperature" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Temperature:"
+
+[node name="FannoPressure" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Pressure:"
+
+[node name="FannoDensity" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Density: "
+
+[node name="FannoStagTemperature" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Stag. Temp. :"
+
+[node name="FannoStagPressure" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Stag. Press. :"
+
+[node name="Flow Velocity" type="Label" parent="Properties/Row 2/ExitProperties"]
+layout_mode = 2
+text = "Flow Velocity:"
+
+[node name="Performance" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 480.0
+offset_right = 1150.0
+offset_bottom = 647.0
+alignment = 2
+
+[node name="ThrustGenerated" type="Label" parent="Performance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(5.2943824e-06, 0.8131803, 0.3405155, 1)
+theme_override_fonts/font = ExtResource("1_2xqae")
+theme_override_font_sizes/font_size = 30
+text = "Thrust Generated: "
+
+[node name="Drag" type="Label" parent="Performance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9996156, 0.3880603, 0.42266983, 1)
+theme_override_fonts/font = ExtResource("1_2xqae")
+theme_override_font_sizes/font_size = 30
+text = "Drag: "
+
+[node name="Net Thrust" type="Label" parent="Performance"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_2xqae")
+theme_override_font_sizes/font_size = 40
+text = "Net Thrust(total): "
+
+[node name="Calculate Again" type="Button" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 575.0
+offset_right = 402.0
+offset_bottom = 645.0
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_fodp3")
+text = "Calculate Again"
+
+[connection signal="pressed" from="Calculate Again" to="." method="_on_calculate_again_pressed"]

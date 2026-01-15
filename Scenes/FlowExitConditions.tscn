@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://be3x5nw5p3ou4"]
+
+[ext_resource type="Script" uid="uid://cma02umvmwheg" path="res://Scripts/Classes/flow_exit_conditions.gd" id="1_nn8eo"]
+
+[node name="FlowExitConditions" type="Node"]
+script = ExtResource("1_nn8eo")

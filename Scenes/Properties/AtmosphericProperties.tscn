@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bshyis8gppaqk"]
+
+[ext_resource type="Script" uid="uid://do6p2s6ecegcb" path="res://Scripts/Classes/atmosferic_properties.gd" id="1_kj3h3"]
+
+[node name="AtmosphericProperties" type="Node"]
+script = ExtResource("1_kj3h3")

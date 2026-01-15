@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://2tkngsppjdsy"]
+
+[ext_resource type="Script" uid="uid://cg3ixpxso5qay" path="res://Scripts/Classes/second_ramp_properties.gd" id="1_ct5tu"]
+
+[node name="SecondRampProperties" type="Node"]
+script = ExtResource("1_ct5tu")
