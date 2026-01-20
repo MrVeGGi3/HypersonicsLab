@@ -299,10 +299,6 @@ text = "Stag. Temp. :"
 layout_mode = 2
 text = "Stag. Press. :"
 
-[node name="Flow Velocity" type="Label" parent="Properties/Row 2/FannoFlow"]
-layout_mode = 2
-text = "Flow Velocity:"
-
 [node name="RayleighFlow" type="VBoxContainer" parent="Properties/Row 2"]
 layout_mode = 2
 

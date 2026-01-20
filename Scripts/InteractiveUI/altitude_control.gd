@@ -59,6 +59,10 @@ func generate_fuel_options():
 		fuel_type.add_item(data["name"], i)	
 		
 func _on_generate_pressed() -> void:
+	generate_values()
+
+
+func generate_values():
 	manager.assign_vehicle_prop_height(h1, h2, h3, he)
 	manager.assign_fuel_index(fuel_index)
 	manager.assign_vehicle_thetas(theta_1, theta_2, vehicle_width)
@@ -67,9 +71,6 @@ func _on_generate_pressed() -> void:
 	manager.assign_burn_cp(burn_cp)
 	manager.start_general_pipeline()
 	hide()
-
-
-
 
 func _on_fuel_type_item_selected(index: int) -> void:
 	fuel_index = index

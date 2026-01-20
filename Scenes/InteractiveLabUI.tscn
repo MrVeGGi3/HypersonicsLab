@@ -146,10 +146,10 @@ text = "θ2"
 
 [node name="VehicleWidth" type="Control" parent="VehicleUI"]
 anchors_preset = 0
-offset_left = 626.0
-offset_top = 117.0
-offset_right = 666.0
-offset_bottom = 157.0
+offset_left = 331.0
+offset_top = 470.0
+offset_right = 371.0
+offset_bottom = 510.0
 
 [node name="VehicleWidthContainer" type="VBoxContainer" parent="VehicleUI/VehicleWidth"]
 layout_mode = 0
@@ -160,6 +160,7 @@ offset_bottom = 78.0
 
 [node name="SpinBox" type="SpinBox" parent="VehicleUI/VehicleWidth/VehicleWidthContainer"]
 layout_mode = 2
+step = 0.1
 alignment = 1
 
 [node name="VehicleLabel" type="Label" parent="VehicleUI/VehicleWidth/VehicleWidthContainer"]
@@ -188,20 +189,13 @@ step = 50.0
 
 [node name="AltitudeLabel" type="Label" parent="AltitudeControl"]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 95.0
-offset_right = 114.0
-offset_bottom = 614.0
+offset_left = -195.0
+offset_top = 643.0
+offset_right = 153.0
+offset_bottom = 1162.0
+rotation = 4.712389
 theme_override_font_sizes/font_size = 40
-text = "A
-L
-T
-I
-T
-U
-D
-E
-(m)"
+text = "ALTITUDE  (Meters)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -216,10 +210,10 @@ step = 50.0
 
 [node name="HeightControl" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 124.0
-offset_top = 559.0
-offset_right = 164.0
-offset_bottom = 599.0
+offset_left = 121.0
+offset_top = 561.0
+offset_right = 161.0
+offset_bottom = 601.0
 
 [node name="Panel" type="Panel" parent="HeightControl"]
 layout_mode = 0
@@ -239,7 +233,7 @@ layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_gyn2x")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_227vq")
 max_value = 20.0
-step = 0.01
+step = 0.0
 alignment = 1
 
 [node name="h2" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
@@ -247,7 +241,7 @@ layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_1r1b1")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_h1v5s")
 max_value = 20.0
-step = 0.01
+step = 0.0
 alignment = 1
 
 [node name="h3" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
@@ -255,7 +249,7 @@ layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_5wgd1")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_uymbp")
 max_value = 20.0
-step = 0.01
+step = 0.0
 alignment = 1
 
 [node name="OutNozzleHeight" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
@@ -307,10 +301,10 @@ text = "Heights Adjustment"
 
 [node name="FuelControl" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 387.0
-offset_top = -150.0
-offset_right = 427.0
-offset_bottom = -110.0
+offset_left = 424.0
+offset_top = -166.0
+offset_right = 464.0
+offset_bottom = -126.0
 
 [node name="Panel" type="Panel" parent="FuelControl"]
 layout_mode = 0
@@ -353,10 +347,10 @@ step = 0.001
 
 [node name="MachControl" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 146.0
-offset_top = 27.0
-offset_right = 186.0
-offset_bottom = 67.0
+offset_left = 119.0
+offset_top = 12.0
+offset_right = 159.0
+offset_bottom = 52.0
 
 [node name="Panel" type="Panel" parent="MachControl"]
 layout_mode = 0
@@ -395,10 +389,10 @@ step = 0.01
 
 [node name="CPBurnControl" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 865.0
-offset_top = 445.0
-offset_right = 905.0
-offset_bottom = 485.0
+offset_left = 857.0
+offset_top = 73.0
+offset_right = 897.0
+offset_bottom = 113.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CPBurnControl"]
 layout_mode = 0
@@ -422,10 +416,10 @@ alignment = 1
 
 [node name="EnergyFuelControl" type="Control" parent="."]
 anchors_preset = 0
-offset_left = 583.0
-offset_top = 467.0
-offset_right = 623.0
-offset_bottom = 507.0
+offset_left = 566.0
+offset_top = 78.0
+offset_right = 606.0
+offset_bottom = 118.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="EnergyFuelControl"]
 layout_mode = 0

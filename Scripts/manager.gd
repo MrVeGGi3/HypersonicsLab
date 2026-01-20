@@ -53,16 +53,8 @@ func start_general_pipeline():
 	debug()
 	
 func debug():
-	print("Rayleigh Sound Velocity:", rayleigh_flow.speed_sound_m_S)	
-	print("Exit Sound Velocity:", flow_exit.speed_sound_m_S)
-	
-	print("Mass Flow Rate:", fanno_flow.mass_flow_rate)
-	print("Combustion Chamber Diameter", vehicle_prop.combustion_chamber_diameter_meters)
-	print("Heat Flow Rate:", fanno_flow.heat_flow_rate)
-	
-	print("Exit Area Inlet:", vehicle_prop.nozzle_inlet_area)
-	print("Exit Area Outlet", vehicle_prop.nozzle_outlet_area)
-	print("A*:", flow_exit.a_throat)
+	print("Drag 1:", vehicle_perf.drag_1)
+	print("Drag 2:", vehicle_perf.drag_2)
 	
 
 func first_ramp_pipeline():

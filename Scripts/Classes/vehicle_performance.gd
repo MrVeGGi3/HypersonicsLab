@@ -14,6 +14,9 @@ var engine_thrust : float
 var total_drag : float
 var net_thrust : float
 
+var drag_1 : float
+var drag_2 : float
+
 func calculate_engine_thrust():
 	var velocity_diff = flow_exit.flow_velocity_m_s - rayleigh_flow.flow_velocity_m_s
 	var exit_product = flow_exit.pressure_pa * vehicle_prop.nozzle_outlet_area
@@ -22,8 +25,8 @@ func calculate_engine_thrust():
 	
 	
 func calculate_total_drag():
-	var drag_1 = first_ramp.pressure_pa * vehicle_prop.ramp_1_height * vehicle_prop.vehicle_width
-	var drag_2 = second_ramp.pressure_pa * vehicle_prop.ramp_2_height * vehicle_prop.vehicle_width
+	drag_1 = first_ramp.pressure_pa * vehicle_prop.ramp_1_height * vehicle_prop.vehicle_width
+	drag_2 = second_ramp.pressure_pa * vehicle_prop.ramp_2_height * vehicle_prop.vehicle_width
 	
 	total_drag = drag_1 + drag_2
 	
