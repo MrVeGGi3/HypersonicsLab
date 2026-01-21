@@ -55,6 +55,7 @@ func start_general_pipeline():
 func debug():
 	print("Drag 1:", vehicle_perf.drag_1)
 	print("Drag 2:", vehicle_perf.drag_2)
+	print("Exit Sound Velocity:", flow_exit.speed_sound_m_S)
 	
 
 func first_ramp_pipeline():
@@ -128,7 +129,7 @@ func update_lab_results():
 	results_lab.temperature.text = "🌡️Temperature: %.2f K" % [atmo_prop.temp_kelvin]
 	results_lab.pressure.text = "☁️Pressure: %.2f Pa" % [atmo_prop.pressure_pa]
 	results_lab.density.text = "🧊Density: %.4f kg/m3" % [atmo_prop.density_kg_m3]
-	results_lab.stag_press.text = "💣Stag. Press.: %.2f Pa" % [atmo_prop.stagnation_pressure]
+	results_lab.stag_press.text = "💣Stag. Press.: %.2f MPa" % [atmo_prop.stagnation_pressure / 1000000.0]
 	results_lab.stag_temp.text = "🔥Stag. Temp.: %.2f K" % [atmo_prop.stagnation_temperature]
 	results_lab.flow_velocity.text = "❯❯ Flow Velocity.: %.2f m/s" % [atmo_prop.flow_velocity_m_s]
 	
@@ -138,7 +139,7 @@ func update_lab_results():
 	results_lab.ramp_1_temperature.text =  "🌡️Temperature: %.2f K" % [ramp_prop.temp_kelvin]
 	results_lab.ramp_1_pressure.text = "☁️Pressure: %.2f Pa" % [ramp_prop.pressure_pa]
 	results_lab.ramp_1_density.text = "🧊Density: %.4f kg/m3" % [ramp_prop.density_kg_m3]
-	results_lab.ramp_1_stag_press.text = "💣Stag. Press.: %.2f Pa" % [ramp_prop.stagnation_pressure]
+	results_lab.ramp_1_stag_press.text = "💣Stag. Press.: %.2f MPa" % [ramp_prop.stagnation_pressure / 1000000.0]
 	results_lab.ramp_1_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [ramp_prop.stagnation_temperature]
 	results_lab.ramp_1_flow_velocity.text = "❯❯ Flow Velocity : %.2f m/s" % [ramp_prop.flow_velocity_m_s]
 	
@@ -146,9 +147,9 @@ func update_lab_results():
 	results_lab.beta_2.text = "β2: %.2f°" % [sec_ramp_prop.beta]
 	results_lab.ramp_2_mach_number.text =  "Ⓜ︎Mach Number: %.2f" % [sec_ramp_prop.mach_number]
 	results_lab.ramp_2_temperature.text = "🌡️Temperature: %.2f K" % [sec_ramp_prop.temp_kelvin]
-	results_lab.ramp_2_pressure.text = "☁️Pressure : %.2f Pa" % [sec_ramp_prop.pressure_pa]
+	results_lab.ramp_2_pressure.text = "☁️Pressure : %.2f KPa" % [sec_ramp_prop.pressure_pa / 1000.0]
 	results_lab.ramp_2_density.text = "🧊Density: %.4f kg/m3" % [sec_ramp_prop.density_kg_m3]
-	results_lab.ramp_2_stag_press.text = "💣Stag. Press.: %.2f Pa" % [sec_ramp_prop.stagnation_pressure]
+	results_lab.ramp_2_stag_press.text = "💣Stag. Press.: %.2f MPa" % [sec_ramp_prop.stagnation_pressure / 1000000.0]
 	results_lab.ramp_2_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [sec_ramp_prop.stagnation_temperature]
 	results_lab.ramp_2_flow_velocity.text = "❯❯ Flow Velocity : %.2f m/s" % [sec_ramp_prop.flow_velocity_m_s]
 	
@@ -158,24 +159,24 @@ func update_lab_results():
 	results_lab.ramp_3_temperature.text = "🌡️Temperature: %.2f K" % [third_ramp_prop.temp_kelvin]
 	results_lab.ramp_3_pressure.text = "☁️Pressure : %.2f Pa" % [third_ramp_prop.pressure_pa]
 	results_lab.ramp_3_density.text = "🧊Density: %.4f Kg/m3" % [third_ramp_prop.density_kg_m3]
-	results_lab.ramp_3_stag_press.text = "💣Stag. Press.: %.2f Pa" % [third_ramp_prop.stagnation_pressure]
+	results_lab.ramp_3_stag_press.text = "💣Stag. Press.: %.2f MPa" % [third_ramp_prop.stagnation_pressure / 1000000.0]
 	results_lab.ramp_3_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [third_ramp_prop.stagnation_temperature]
 	results_lab.ramp_3_flow_velocity.text = "❯❯ Flow Velocity : %.2f m/s" % [third_ramp_prop.flow_velocity_m_s]  
 
 	
 	results_lab.fanno_mach_number.text = "Ⓜ︎Mach Number: %.2f" % [fanno_flow.mach_number]
 	results_lab.fanno_temperature.text = "🌡️Temperature: %.2f K" % [fanno_flow.temp_kelvin]
-	results_lab.fanno_pressure.text = "☁️Pressure: %.2f Pa" % [fanno_flow.pressure_pa]
+	results_lab.fanno_pressure.text = "☁️Pressure: %.2f KPa" % [fanno_flow.pressure_pa / 1000.0]
 	results_lab.fanno_density.text = "🧊Density: %.4f kg/m3" % [fanno_flow.density_kg_m3]
-	results_lab.fanno_stag_press.text = "💣Stag. Press.: %.2f Pa" % [fanno_flow.stagnation_pressure]
+	results_lab.fanno_stag_press.text = "💣Stag. Press.: %.2f MPa" % [fanno_flow.stagnation_pressure / 1000000.0]
 	results_lab.fanno_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [fanno_flow.stagnation_temperature]
 	
 	
 	results_lab.rayleigh_mach_number.text = "Ⓜ︎Mach Number: %.2f" % [rayleigh_flow.mach_number]
 	results_lab.rayleigh_temperature.text = "🌡️Temperature : %.2f K" % [rayleigh_flow.temp_kelvin]
-	results_lab.rayleigh_pressure.text = "☁️Pressure : %.2f Pa" % [rayleigh_flow.pressure_pa]
+	results_lab.rayleigh_pressure.text = "☁️Pressure : %.2f KPa" % [rayleigh_flow.pressure_pa / 1000.0]
 	results_lab.rayleigh_density.text = "🧊Density: %.4f kg/m3" % [rayleigh_flow.density_kg_m3]
-	results_lab.rayleigh_stag_press.text = "💣Stag. Press.: %.2f Pa" % [rayleigh_flow.stagnation_pressure]
+	results_lab.rayleigh_stag_press.text = "💣Stag. Press.: %.2f MPa" % [rayleigh_flow.stagnation_pressure / 1000000.0]
 	results_lab.rayleigh_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [rayleigh_flow.stagnation_temperature]
 	results_lab.rayleigh_flow_velocity.text = "❯❯ Flow Velocity: %.2f m/s" % [rayleigh_flow.flow_velocity_m_s]
 
@@ -184,12 +185,16 @@ func update_lab_results():
 	results_lab.exit_temperature.text = "🌡️Temperature : %.2f K" % [flow_exit.temp_kelvin]
 	results_lab.exit_pressure.text = "☁️Pressure : %.2f Pa" % [flow_exit.pressure_pa]
 	results_lab.exit_density.text = "🧊Density: %.4f kg/m3" % [flow_exit.density_kg_m3]
-	results_lab.exit_stag_press.text = "💣Stag. Press.: %.2f Pa" % [flow_exit.stagnation_pressure]
+	results_lab.exit_stag_press.text = "💣Stag. Press.: %.2f MPa" % [flow_exit.stagnation_pressure / 1000000.0]
 	results_lab.exit_stag_temp.text = "🔥Stag. Temp.: %.2f K" % [rayleigh_flow.stagnation_temperature]
 	results_lab.exit_flow_velocity.text = "❯❯ Flow Velocity : %.2f m/s" % [flow_exit.flow_velocity_m_s]
 	
 	results_lab.thrust_generated.text = "⚙️Thrust Generated: %.2f N" % [vehicle_perf.engine_thrust]
 	results_lab.drag.text = "💨 Drag: %.2f N" % [vehicle_perf.total_drag]
 	results_lab.net_thrust.text = "🚀Net Thrust: %.2f N" % [vehicle_perf.net_thrust]
-
+	
+	if vehicle_perf.net_thrust > 0:
+		results_lab.net_thrust.modulate = Color.GREEN
+	else:
+		results_lab.net_thrust.modulate = Color.RED
 	results_lab.show()
