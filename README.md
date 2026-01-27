@@ -22,7 +22,6 @@ This module validates the interaction between three fundamental gas dynamics phe
 3.  **Isentropic Flow (Nozzle):** Gas expansion and thrust generation using variable geometry nozzles.
 
 > **Technical Highlight:** The implemented solver is **hybrid**, utilizing **Newton-Raphson** methods for precision and **Bisection** for numerical stability, capable of dynamically handling the transition between subsonic and supersonic regimes.
-Technical Highlight: The implemented solver is hybrid, utilizing Newton-Raphson methods for precision and Bisection for numerical stability, capable of dynamically handling the transition between subsonic and supersonic regimes.
 > ---
 
 ## 🏗️ Laboratory Architecture
