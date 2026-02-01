@@ -8,13 +8,42 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="HypersonicsLab"
-config/features=PackedStringArray("4.5", "GL Compatibility")
+run/main_scene="uid://dgb0dxvu57c27"
+config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+XRToolsUserSettings="*uid://bqgb8i74tm0t"
+XRToolsRumbleManager="*uid://by853dk86g1qw"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot-xr-tools/plugin.cfg")
+
+[layer_names]
+
+3d_physics/layer_1="Player"
+3d_physics/layer_2="Environment"
 
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+
+[xr]
+
+openxr/enabled=true
+openxr/extensions/hand_tracking=true
+openxr/extensions/hand_tracking_unobstructed_data_source=true
+openxr/extensions/hand_tracking_controller_data_source=true
+shaders/enabled=true
+openxr/extensions/meta/color_space/starting_color_space=3

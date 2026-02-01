@@ -1,7 +1,7 @@
 class_name AreaMachSolver
 extends Node
 
-const TOLERANCE = 0.00001
+const TOLERANCE = 0.000001
 const MAX_ITERATIONS = 100
 
 # Resolve a equação para encontrar o Mach (M) dado uma razão de área ao quadrado

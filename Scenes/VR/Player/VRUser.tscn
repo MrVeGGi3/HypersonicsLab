@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bhsp1cay7dew7"]
+
+[ext_resource type="PackedScene" uid="uid://dhaqth6q5yw4n" path="res://addons/godot-xr-tools/hands/model/hand_l.gltf" id="1_x5dd3"]
+[ext_resource type="PackedScene" uid="uid://ds1t8vc0kxoeo" path="res://addons/godot-xr-tools/hands/model/hand_r.gltf" id="2_eafc2"]
+[ext_resource type="PackedScene" uid="uid://b6bk2pj8vbj28" path="res://addons/godot-xr-tools/functions/movement_turn.tscn" id="2_ipyl1"]
+[ext_resource type="PackedScene" uid="uid://cqhw276realc" path="res://addons/godot-xr-tools/functions/function_pointer.tscn" id="4_6ib3t"]
+[ext_resource type="PackedScene" uid="uid://diyu06cw06syv" path="res://addons/godot-xr-tools/player/player_body.tscn" id="5_k5pfe"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sdp3u"]
+
+[node name="VrUser" type="XROrigin3D" unique_id=1561770876]
+current = true
+
+[node name="XRCamera3D" type="XRCamera3D" parent="." unique_id=474562632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4206593, -0.012289882)
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="." unique_id=128838541]
+collision_mask = 2
+platform_floor_layers = 4294967042
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D" unique_id=1675463913]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.9855257, 0)
+shape = SubResource("CapsuleShape3D_sdp3u")
+
+[node name="LeftHand" type="XRController3D" parent="." unique_id=834178987]
+tracker = &"left_hand"
+
+[node name="hand_l" parent="LeftHand" unique_id=1696973555 instance=ExtResource("1_x5dd3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1632512, 0)
+
+[node name="MovementTurn" parent="LeftHand" unique_id=982519751 instance=ExtResource("2_ipyl1")]
+
+[node name="RightHand" type="XRController3D" parent="." unique_id=2053740470]
+tracker = &"right_hand"
+
+[node name="hand_r" parent="RightHand" unique_id=51521043 instance=ExtResource("2_eafc2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0954088, 0)
+
+[node name="FunctionPointer" parent="RightHand" unique_id=1943636416 instance=ExtResource("4_6ib3t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.02, 0.05, -0.1)
+
+[node name="PlayerBody" parent="." unique_id=81722072 instance=ExtResource("5_k5pfe")]

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://ci2601uch43w1"]
+
+[ext_resource type="PackedScene" uid="uid://bvltcelkp17g1" path="res://Scenes/Properties/VehicleProperties.tscn" id="1_oljpf"]
+[ext_resource type="PackedScene" uid="uid://bshyis8gppaqk" path="res://Scenes/Properties/AtmosphericProperties.tscn" id="2_3n8ey"]
+[ext_resource type="PackedScene" uid="uid://lbosld0ncr81" path="res://Scenes/Properties/RampProperties.tscn" id="3_aw7cg"]
+[ext_resource type="PackedScene" uid="uid://2tkngsppjdsy" path="res://Scenes/Properties/SecondRampProperties.tscn" id="4_24qyy"]
+[ext_resource type="PackedScene" uid="uid://bgnhwf44mi210" path="res://Scenes/Properties/ThirdRampProperties.tscn" id="5_72wb6"]
+[ext_resource type="PackedScene" uid="uid://njasetr3wj3s" path="res://Scenes/FinalFlows/FannoFlow.tscn" id="6_1pjb4"]
+[ext_resource type="PackedScene" uid="uid://ba5j0xmjb04xc" path="res://Scenes/FinalFlows/RayleighFlow.tscn" id="7_34ki7"]
+[ext_resource type="PackedScene" uid="uid://be3x5nw5p3ou4" path="res://Scenes/FinalFlows/FlowExitConditions.tscn" id="8_8lj0l"]
+[ext_resource type="PackedScene" uid="uid://b2qnocje8r6ro" path="res://Scenes/First Test/VehiclePerformance.tscn" id="9_8ssqp"]
+[ext_resource type="Script" uid="uid://buxwyd63qoqvl" path="res://Scripts/manager.gd" id="10_ye65x"]
+[ext_resource type="PackedScene" uid="uid://beqftbqir3tcs" path="res://Scenes/First Test/InteractiveLabUI.tscn" id="11_pbiu1"]
+
+[node name="PreDesignLab" type="Control" unique_id=1467634731]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VehicleProperties" parent="." unique_id=1689907853 instance=ExtResource("1_oljpf")]
+
+[node name="AtmosphericProperties" parent="." unique_id=1252427590 instance=ExtResource("2_3n8ey")]
+
+[node name="RampProperties" parent="." unique_id=67775720 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("3_aw7cg")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="SecondRampProperties" parent="." unique_id=89207496 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("4_24qyy")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="ThirdRampProperties" parent="." unique_id=244183926 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("5_72wb6")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="FannoFlow" parent="." unique_id=1516946984 node_paths=PackedStringArray("final_ramp", "vehicle_par", "atmo_properties") instance=ExtResource("6_1pjb4")]
+final_ramp = NodePath("../ThirdRampProperties")
+vehicle_par = NodePath("../VehicleProperties")
+atmo_properties = NodePath("../AtmosphericProperties")
+
+[node name="RayleighFlow" parent="." unique_id=1271260924 node_paths=PackedStringArray("fanno_flow", "atmo_prop") instance=ExtResource("7_34ki7")]
+fanno_flow = NodePath("../FannoFlow")
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="FlowExitConditions" parent="." unique_id=1074025197 node_paths=PackedStringArray("vehicle_prop", "rayleigh_flow") instance=ExtResource("8_8lj0l")]
+vehicle_prop = NodePath("../VehicleProperties")
+rayleigh_flow = NodePath("../RayleighFlow")
+
+[node name="VehiclePerformance" parent="." unique_id=1154267529 node_paths=PackedStringArray("first_ramp", "second_ramp", "vehicle_prop", "fanno_flow", "rayleigh_flow", "flow_exit") instance=ExtResource("9_8ssqp")]
+first_ramp = NodePath("../RampProperties")
+second_ramp = NodePath("../SecondRampProperties")
+vehicle_prop = NodePath("../VehicleProperties")
+fanno_flow = NodePath("../FannoFlow")
+rayleigh_flow = NodePath("../RayleighFlow")
+flow_exit = NodePath("../FlowExitConditions")
+
+[node name="Manager" type="Node" parent="." unique_id=1906279023 node_paths=PackedStringArray("vehicle_prop", "atmo_prop", "ramp_prop", "sec_ramp_prop", "third_ramp_prop", "fanno_flow", "rayleigh_flow", "flow_exit", "vehicle_perf")]
+script = ExtResource("10_ye65x")
+vehicle_prop = NodePath("../VehicleProperties")
+atmo_prop = NodePath("../AtmosphericProperties")
+ramp_prop = NodePath("../RampProperties")
+sec_ramp_prop = NodePath("../SecondRampProperties")
+third_ramp_prop = NodePath("../ThirdRampProperties")
+fanno_flow = NodePath("../FannoFlow")
+rayleigh_flow = NodePath("../RayleighFlow")
+flow_exit = NodePath("../FlowExitConditions")
+vehicle_perf = NodePath("../VehiclePerformance")
+
+[node name="InteractiveLabUi" parent="." unique_id=2129985465 node_paths=PackedStringArray("rayleigh_flow", "fanno_flow", "manager") instance=ExtResource("11_pbiu1")]
+layout_mode = 1
+rayleigh_flow = NodePath("../RayleighFlow")
+fanno_flow = NodePath("../FannoFlow")
+manager = NodePath("../Manager")

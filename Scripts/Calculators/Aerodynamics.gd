@@ -2,7 +2,7 @@ class_name Aerodynamics
 extends Node
 
 const MAX_ITERATIONS = 100
-const TOLERANCE = 0.0001
+const TOLERANCE = 0.00001
 
 # --- FUNÇÃO PRINCIPAL ---
 # Retorna o Beta (Ângulo da Onda) em GRAUS

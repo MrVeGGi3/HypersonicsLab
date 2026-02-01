@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bfx4giqdvsa44"]
+
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_0ijx8"]
+[ext_resource type="Script" uid="uid://hjrmajvk7mj5" path="res://Scripts/UI/perfomance_properties.gd" id="1_brhdx"]
+[ext_resource type="Theme" uid="uid://3e1wqrs42t6v" path="res://Themes/LabelPerformance.tres" id="2_brhdx"]
+
+[node name="PerfomanceProperties" type="Control" unique_id=1863361261]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_brhdx")
+
+[node name="Panel" type="Panel" parent="." unique_id=602921117]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1112.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=252264602]
+layout_mode = 0
+offset_left = 207.0
+offset_right = 999.0
+offset_bottom = 80.0
+
+[node name="PerformLabel" type="Label" parent="VBoxContainer" unique_id=538057045]
+layout_mode = 2
+theme = ExtResource("1_0ijx8")
+text = "Performance Properties"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1247685852]
+layout_mode = 2
+
+[node name="EngineLabel" type="Label" parent="VBoxContainer" unique_id=788021882]
+layout_mode = 2
+theme = ExtResource("2_brhdx")
+horizontal_alignment = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer" unique_id=2137773320]
+layout_mode = 2
+
+[node name="DragLabel" type="Label" parent="VBoxContainer" unique_id=1648494564]
+layout_mode = 2
+theme = ExtResource("2_brhdx")
+horizontal_alignment = 1
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer" unique_id=1325187424]
+layout_mode = 2
+
+[node name="NetThrustLabel" type="Label" parent="VBoxContainer" unique_id=744475183]
+layout_mode = 2
+theme = ExtResource("2_brhdx")
+horizontal_alignment = 1

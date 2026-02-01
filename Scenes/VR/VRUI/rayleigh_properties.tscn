@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://d1hj8lpkup8w"]
+
+[ext_resource type="Script" uid="uid://bv7b18pa2kb38" path="res://Scripts/rayleigh_properties.gd" id="1_aqeab"]
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_csbn5"]
+[ext_resource type="Theme" uid="uid://cguww0cl6anij" path="res://Themes/LabelResults.tres" id="2_aqeab"]
+
+[node name="RayleighProperties" type="Control" unique_id=1132562581]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_aqeab")
+
+[node name="Panel" type="Panel" parent="." unique_id=2144361746]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1115.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=24833123]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 677.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="RayleighTitleLabel" type="Label" parent="VBoxContainer" unique_id=640038680]
+layout_mode = 2
+theme = ExtResource("1_csbn5")
+text = "Rayleigh Flow"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1648310589]
+layout_mode = 2
+
+[node name="RayleighMachLabel" type="Label" parent="VBoxContainer" unique_id=599732966]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighTempLabel" type="Label" parent="VBoxContainer" unique_id=396258843]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighPresLabel" type="Label" parent="VBoxContainer" unique_id=1205361470]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighDensLabel" type="Label" parent="VBoxContainer" unique_id=735911334]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighStagTempLabel" type="Label" parent="VBoxContainer" unique_id=1996457346]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighStagPresLabel" type="Label" parent="VBoxContainer" unique_id=1974302013]
+layout_mode = 2
+theme = ExtResource("2_aqeab")
+horizontal_alignment = 1
+
+[node name="RayleighFlowVelLabel" type="Label" parent="VBoxContainer" unique_id=2022932250]
+layout_mode = 2
+theme = ExtResource("2_aqeab")

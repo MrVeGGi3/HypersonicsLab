@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://b27ulnl4d3c5w"]
+
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_43iyw"]
+[ext_resource type="Script" uid="uid://erp4pe6cydym" path="res://Scripts/UI/vr_ramp_2_properties.gd" id="1_mo8eb"]
+[ext_resource type="Theme" uid="uid://cguww0cl6anij" path="res://Themes/LabelResults.tres" id="2_mo8eb"]
+
+[node name="VRRamp2Properties" type="Control" unique_id=174535668]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_mo8eb")
+
+[node name="Panel" type="Panel" parent="." unique_id=1616897696]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1115.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=787728422]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 677.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="R2TitleLabel" type="Label" parent="VBoxContainer" unique_id=1132622006]
+layout_mode = 2
+theme = ExtResource("1_43iyw")
+text = "Ramp 2"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1700651578]
+layout_mode = 2
+
+[node name="R2ThetaLabel" type="Label" parent="VBoxContainer" unique_id=2117083319]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2BetaLabel" type="Label" parent="VBoxContainer" unique_id=87316451]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2MachLabel" type="Label" parent="VBoxContainer" unique_id=1061773143]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2TempLabel" type="Label" parent="VBoxContainer" unique_id=2089425061]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2PresLabel" type="Label" parent="VBoxContainer" unique_id=1505927093]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2DensLabel" type="Label" parent="VBoxContainer" unique_id=1721476236]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2StagTempLabel" type="Label" parent="VBoxContainer" unique_id=707694631]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2StagPresLabel" type="Label" parent="VBoxContainer" unique_id=1808822674]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1
+
+[node name="R2FlowVelLabel" type="Label" parent="VBoxContainer" unique_id=888771370]
+layout_mode = 2
+theme = ExtResource("2_mo8eb")
+horizontal_alignment = 1

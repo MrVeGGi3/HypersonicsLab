@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://denp38njogjhw"]
+
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_gbqod"]
+[ext_resource type="Script" uid="uid://dsgahv5g2dwqq" path="res://Scripts/UI/vr_ramp_3_properties.gd" id="1_rjula"]
+[ext_resource type="Theme" uid="uid://cguww0cl6anij" path="res://Themes/LabelResults.tres" id="2_rjula"]
+
+[node name="VRRamp3Properties" type="Control" unique_id=604974517]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_rjula")
+
+[node name="Panel" type="Panel" parent="." unique_id=1268319558]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1115.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1616855194]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 677.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="R3TitleLabel" type="Label" parent="VBoxContainer" unique_id=839929552]
+layout_mode = 2
+theme = ExtResource("1_gbqod")
+text = "Ramp 3"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1264584968]
+layout_mode = 2
+
+[node name="R3ThetaLabel" type="Label" parent="VBoxContainer" unique_id=1985637572]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3BetaLabel" type="Label" parent="VBoxContainer" unique_id=315304367]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3MachLabel" type="Label" parent="VBoxContainer" unique_id=1711920168]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3TempLabel" type="Label" parent="VBoxContainer" unique_id=1133466953]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3PresLabel" type="Label" parent="VBoxContainer" unique_id=998444698]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3DensLabel" type="Label" parent="VBoxContainer" unique_id=118998647]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3StagTempLabel" type="Label" parent="VBoxContainer" unique_id=1062059995]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+
+[node name="R3StagPresLabel" type="Label" parent="VBoxContainer" unique_id=776985505]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1
+
+[node name="R3FlowVelLabel" type="Label" parent="VBoxContainer" unique_id=2002256519]
+layout_mode = 2
+theme = ExtResource("2_rjula")
+horizontal_alignment = 1

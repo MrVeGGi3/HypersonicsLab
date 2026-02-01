@@ -1,4 +1,4 @@
-class_name  InteractiveLabUi
+class_name  VRInteractiveLabUi
 extends Control
 
 @onready var altitude_slider : VSlider = $AltitudeControl/AltitudeSlider
@@ -27,13 +27,15 @@ var vehicle_width : float
 
 var fuel_index : int
 var burn_cp : float
+var can_update : bool = false
 
 func _ready() -> void:
+	await get_tree().process_frame
 	generate_fuel_options()
 	set_initial_cp()
 	var energy_text = fanno_flow.FUEL_PRESETS[0]["energy"] / 1000000.0
 	energy_gen.text = "%.2f MJ" % [energy_text]
-	
+	can_update = true
 
 func set_initial_cp():
 	burn_cp_sbox.value = rayleigh_flow.burn_cp
@@ -68,14 +70,17 @@ func generate_fuel_options():
 
 
 func generate_values():
-	manager.assign_vehicle_prop_height(h1, h2, h3, he)
-	manager.assign_fuel_index(fuel_index)
-	manager.assign_vehicle_thetas(theta_1, theta_2, vehicle_width)
-	manager.assign_mach_number(mach_number)
-	manager.assign_altitude(altitude)
-	manager.assign_burn_cp(burn_cp)
-	manager.start_general_pipeline()
-	hide()
+	if can_update:
+		manager.assign_vehicle_prop_height(h1, h2, h3, he)
+		manager.assign_fuel_index(fuel_index)
+		manager.assign_vehicle_thetas(theta_1, theta_2, vehicle_width)
+		manager.assign_mach_number(mach_number)
+		manager.assign_altitude(altitude)
+		manager.assign_burn_cp(burn_cp)
+		manager.start_general_pipeline()
+		hide()
+	else:
+		return
 
 func _on_fuel_type_item_selected(index: int) -> void:
 	fuel_index = index

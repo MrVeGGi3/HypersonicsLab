@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c3cdmuisy7ri3"]
+
+[ext_resource type="Script" uid="uid://bhufmpegel7ol" path="res://Scripts/UI/exit_properties.gd" id="1_cqnsn"]
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_dyobn"]
+[ext_resource type="Theme" uid="uid://cguww0cl6anij" path="res://Themes/LabelResults.tres" id="2_cqnsn"]
+
+[node name="ExitProperties" type="Control" unique_id=476873968]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_cqnsn")
+
+[node name="Panel" type="Panel" parent="." unique_id=62284782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1115.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1509592424]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 677.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="ExitTitleLabel" type="Label" parent="VBoxContainer" unique_id=2062514493]
+layout_mode = 2
+theme = ExtResource("1_dyobn")
+text = "Exit Properties"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1594251812]
+layout_mode = 2
+
+[node name="ExitMachLabel" type="Label" parent="VBoxContainer" unique_id=1940352893]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1
+
+[node name="ExitTempLabel" type="Label" parent="VBoxContainer" unique_id=785155617]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1
+
+[node name="ExitPresLabel" type="Label" parent="VBoxContainer" unique_id=630741072]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1
+
+[node name="ExitDensLabel" type="Label" parent="VBoxContainer" unique_id=2010265897]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1
+
+[node name="ExitStagTempLabel" type="Label" parent="VBoxContainer" unique_id=1505163399]
+layout_mode = 2
+
+[node name="ExitStagPresLabel" type="Label" parent="VBoxContainer" unique_id=1246047560]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1
+
+[node name="ExitFlowVelLabel" type="Label" parent="VBoxContainer" unique_id=1707904594]
+layout_mode = 2
+theme = ExtResource("2_cqnsn")
+horizontal_alignment = 1

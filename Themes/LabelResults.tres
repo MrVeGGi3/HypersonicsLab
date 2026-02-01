@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://cguww0cl6anij"]
+
+[ext_resource type="FontFile" uid="uid://ctyjjpfc1nhqq" path="res://Fonts/RobotoMono-Bold.ttf" id="1_dxp3o"]
+
+[resource]
+Label/font_sizes/font_size = 40
+Label/fonts/font = ExtResource("1_dxp3o")

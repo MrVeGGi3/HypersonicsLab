@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://4vjtvfda2bxj"]
+
+[ext_resource type="Script" uid="uid://r7yyfqfsio4j" path="res://Scripts/vr_lab_results.gd" id="1_fub4f"]
+
+[node name="VRLabResults" type="Node" unique_id=345084516]
+script = ExtResource("1_fub4f")

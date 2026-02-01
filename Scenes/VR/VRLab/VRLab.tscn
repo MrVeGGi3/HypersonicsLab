@@ -1,0 +1,306 @@
+[gd_scene format=3 uid="uid://dgb0dxvu57c27"]
+
+[ext_resource type="PackedScene" uid="uid://clujaf3u776a3" path="res://addons/godot-xr-tools/objects/viewport_2d_in_3d.tscn" id="1_c0spg"]
+[ext_resource type="PackedScene" uid="uid://b1h1u5wb7u63" path="res://Scenes/VR/VRLab/VRInteractiveLabUI.tscn" id="2_i1o5v"]
+[ext_resource type="Script" uid="uid://duwcgxbpdsuid" path="res://Scripts/proprieties_setter.gd" id="3_4lyyf"]
+[ext_resource type="PackedScene" uid="uid://bvltcelkp17g1" path="res://Scenes/Properties/VehicleProperties.tscn" id="3_ihk2h"]
+[ext_resource type="PackedScene" uid="uid://bshyis8gppaqk" path="res://Scenes/Properties/AtmosphericProperties.tscn" id="4_n42v5"]
+[ext_resource type="PackedScene" uid="uid://lbosld0ncr81" path="res://Scenes/Properties/RampProperties.tscn" id="5_vep42"]
+[ext_resource type="PackedScene" uid="uid://2tkngsppjdsy" path="res://Scenes/Properties/SecondRampProperties.tscn" id="6_yqqla"]
+[ext_resource type="PackedScene" uid="uid://bgnhwf44mi210" path="res://Scenes/Properties/ThirdRampProperties.tscn" id="7_b1u6s"]
+[ext_resource type="PackedScene" uid="uid://njasetr3wj3s" path="res://Scenes/FinalFlows/FannoFlow.tscn" id="8_a0tno"]
+[ext_resource type="PackedScene" uid="uid://ba5j0xmjb04xc" path="res://Scenes/FinalFlows/RayleighFlow.tscn" id="9_qpro7"]
+[ext_resource type="PackedScene" uid="uid://be3x5nw5p3ou4" path="res://Scenes/FinalFlows/FlowExitConditions.tscn" id="10_mjlxn"]
+[ext_resource type="PackedScene" uid="uid://b2qnocje8r6ro" path="res://Scenes/First Test/VehiclePerformance.tscn" id="11_8qwst"]
+[ext_resource type="PackedScene" uid="uid://cmeixntph8nly" path="res://Scenes/VR/VRLab/VRManager.tscn" id="12_i1o5v"]
+[ext_resource type="PackedScene" uid="uid://4vjtvfda2bxj" path="res://Scenes/VR/VRLab/VRLabResults.tscn" id="13_i1o5v"]
+[ext_resource type="PackedScene" uid="uid://do7qksrhwy3b4" path="res://Scenes/VR/VRUI/vr_atmosphere_properties_ui.tscn" id="14_yqqla"]
+[ext_resource type="PackedScene" uid="uid://8qiu0t2dx1f4" path="res://Scenes/VR/VRUI/vr_ramp_1_properties.tscn" id="15_b1u6s"]
+[ext_resource type="PackedScene" uid="uid://b27ulnl4d3c5w" path="res://Scenes/VR/VRUI/vr_ramp_2_properties.tscn" id="16_a0tno"]
+[ext_resource type="PackedScene" uid="uid://denp38njogjhw" path="res://Scenes/VR/VRUI/vr_ramp_3_properties.tscn" id="17_qpro7"]
+[ext_resource type="PackedScene" uid="uid://dh5nn6ix2gnu7" path="res://Scenes/VR/VRUI/fanno_properties.tscn" id="18_qpro7"]
+[ext_resource type="PackedScene" uid="uid://d1hj8lpkup8w" path="res://Scenes/VR/VRUI/rayleigh_properties.tscn" id="19_mjlxn"]
+[ext_resource type="PackedScene" uid="uid://c3cdmuisy7ri3" path="res://Scenes/VR/VRUI/exit_properties.tscn" id="20_mjlxn"]
+[ext_resource type="PackedScene" uid="uid://bfx4giqdvsa44" path="res://Scenes/VR/VRUI/perfomance_properties.tscn" id="21_mjlxn"]
+[ext_resource type="PackedScene" uid="uid://cjxd1nl4rnyo" path="res://Scenes/VR/XRInitializer.tscn" id="22_38ene"]
+[ext_resource type="PackedScene" uid="uid://bhsp1cay7dew7" path="res://Scenes/VR/Player/VRUser.tscn" id="23_4kjy6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kjy6"]
+sky_top_color = Color(0.28344157, 0.33621374, 1, 1)
+sky_horizon_color = Color(0.79521835, 0.80841136, 0.9743579, 1)
+ground_bottom_color = Color(0.3818348, 0.3818348, 0.3818348, 1)
+ground_horizon_color = Color(0.79521835, 0.80841136, 0.9743579, 1)
+
+[sub_resource type="Sky" id="Sky_4lyyf"]
+sky_material = SubResource("ProceduralSkyMaterial_4kjy6")
+
+[sub_resource type="Environment" id="Environment_ls1rr"]
+background_mode = 2
+sky = SubResource("Sky_4lyyf")
+tonemap_mode = 2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ajl43"]
+albedo_color = Color(0.9758379, 0.5965098, 0.33124223, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ajl43"]
+size = Vector3(20, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_icivm"]
+size = Vector3(10.142151, 1, 10.12207)
+
+[sub_resource type="BoxMesh" id="BoxMesh_46c4e"]
+size = Vector3(5, 4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iw6ar"]
+size = Vector3(5, 4, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_icivm"]
+size = Vector3(10, 5, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_46c4e"]
+size = Vector3(10, 6, 1)
+
+[node name="Lab" type="Node3D" unique_id=599933018]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1266617798]
+environment = SubResource("Environment_ls1rr")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1342852651]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="MonitorsWall" type="Node3D" parent="." unique_id=1729438614]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MonitorsWall" unique_id=1446148833]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62797594, 0, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D" unique_id=56475771]
+material_override = SubResource("StandardMaterial3D_ajl43")
+mesh = SubResource("BoxMesh_ajl43")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D" unique_id=1635369346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.053375244, 0, -0.19677734)
+shape = SubResource("BoxShape3D_icivm")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="MonitorsWall" unique_id=1184520126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.34290886, 1.9136169, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D2" unique_id=971843363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D2" unique_id=1658144899]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="MonitorsWall" unique_id=1496018855]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3417635, 5.6991396, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D3" unique_id=1280764557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D3" unique_id=1112215299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="MonitorsWall" unique_id=751583056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.142106, 5.8546305, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D4" unique_id=787311431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D4" unique_id=65977316]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="MonitorsWall" unique_id=336602048]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.185003, 1.8813136, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D5" unique_id=491777357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D5" unique_id=417055502]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="StaticBody3D6" type="StaticBody3D" parent="MonitorsWall" unique_id=1255654218]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.270773, 7.0391846, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D6" unique_id=1199186167]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D6" unique_id=692348285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="StaticBody3D7" type="StaticBody3D" parent="MonitorsWall" unique_id=188943939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.150673, 7.0391846, 0)
+collision_layer = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MonitorsWall/StaticBody3D7" unique_id=1281971993]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.199567, 0.5574837, -4.2830343)
+mesh = SubResource("BoxMesh_46c4e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MonitorsWall/StaticBody3D7" unique_id=343213270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.15979, 0.5837827, -4.288562)
+shape = SubResource("BoxShape3D_iw6ar")
+
+[node name="MainMonitor" type="Node3D" parent="." unique_id=1988579113]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.52505493, 1.0937977, -4.250556)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MainMonitor" unique_id=692729967]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MainMonitor/StaticBody3D" unique_id=1118556715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9633489, 0)
+mesh = SubResource("BoxMesh_icivm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MainMonitor/StaticBody3D" unique_id=582450933]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5734155, 0)
+shape = SubResource("BoxShape3D_46c4e")
+
+[node name="ProprietiesSetter" type="Node" parent="MainMonitor" unique_id=168484436 node_paths=PackedStringArray("lab_ui_viewport")]
+script = ExtResource("3_4lyyf")
+lab_ui_viewport = NodePath("../Viewport2Din3D")
+
+[node name="Viewport2Din3D" parent="MainMonitor" unique_id=445569740 node_paths=PackedStringArray("rayleigh_flow", "fanno_flow", "manager") instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6536932, 0)
+screen_size = Vector2(8, 4.5)
+scene = ExtResource("2_i1o5v")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("vr_interactive_lab_ui.gd", "rayleigh_flow", "fanno_flow", "manager")
+rayleigh_flow = NodePath("../../RayleighFlow")
+fanno_flow = NodePath("../../FannoFlow")
+manager = NodePath("../../VrManager")
+
+[node name="VrManager" parent="." unique_id=1117102481 node_paths=PackedStringArray("vehicle_prop", "atmo_prop", "ramp_prop", "sec_ramp_prop", "third_ramp_prop", "fanno_flow", "rayleigh_flow", "flow_exit", "vehicle_perf", "results_lab") instance=ExtResource("12_i1o5v")]
+vehicle_prop = NodePath("../VehicleProperties")
+atmo_prop = NodePath("../AtmosphericProperties")
+ramp_prop = NodePath("../RampProperties")
+sec_ramp_prop = NodePath("../SecondRampProperties")
+third_ramp_prop = NodePath("../ThirdRampProperties")
+fanno_flow = NodePath("../FannoFlow")
+rayleigh_flow = NodePath("../RayleighFlow")
+flow_exit = NodePath("../FlowExitConditions")
+vehicle_perf = NodePath("../VehiclePerformance")
+results_lab = NodePath("../VRLabResults")
+
+[node name="VehicleProperties" parent="." unique_id=1164770946 instance=ExtResource("3_ihk2h")]
+
+[node name="RampProperties" parent="." unique_id=1917992602 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("5_vep42")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="SecondRampProperties" parent="." unique_id=1589938183 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("6_yqqla")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="ThirdRampProperties" parent="." unique_id=1922226790 node_paths=PackedStringArray("atmo_prop") instance=ExtResource("7_b1u6s")]
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="FannoFlow" parent="." unique_id=988303944 node_paths=PackedStringArray("final_ramp", "vehicle_par", "atmo_properties") instance=ExtResource("8_a0tno")]
+final_ramp = NodePath("../ThirdRampProperties")
+vehicle_par = NodePath("../VehicleProperties")
+atmo_properties = NodePath("../AtmosphericProperties")
+
+[node name="RayleighFlow" parent="." unique_id=1965483144 node_paths=PackedStringArray("fanno_flow", "atmo_prop") instance=ExtResource("9_qpro7")]
+fanno_flow = NodePath("../FannoFlow")
+atmo_prop = NodePath("../AtmosphericProperties")
+
+[node name="FlowExitConditions" parent="." unique_id=142426801 node_paths=PackedStringArray("vehicle_prop", "rayleigh_flow") instance=ExtResource("10_mjlxn")]
+vehicle_prop = NodePath("../VehicleProperties")
+rayleigh_flow = NodePath("../RayleighFlow")
+
+[node name="VehiclePerformance" parent="." unique_id=134684171 node_paths=PackedStringArray("first_ramp", "second_ramp", "vehicle_prop", "fanno_flow", "rayleigh_flow", "flow_exit") instance=ExtResource("11_8qwst")]
+first_ramp = NodePath("../RampProperties")
+second_ramp = NodePath("../SecondRampProperties")
+vehicle_prop = NodePath("../VehicleProperties")
+fanno_flow = NodePath("../FannoFlow")
+rayleigh_flow = NodePath("../RayleighFlow")
+flow_exit = NodePath("../FlowExitConditions")
+
+[node name="VRLabResults" parent="." unique_id=345084516 node_paths=PackedStringArray("vr_atmo_prop", "vr_ramp_1", "vr_ramp_2", "vr_ramp_3", "vr_fanno", "vr_rayleigh", "vr_exit", "vr_perf_exit") instance=ExtResource("13_i1o5v")]
+vr_atmo_prop = NodePath("../ResultsMonitors/AtmoPropertiesViewport")
+vr_ramp_1 = NodePath("../ResultsMonitors/Ramp1Viewport")
+vr_ramp_2 = NodePath("../ResultsMonitors/Ramp2Viewport")
+vr_ramp_3 = NodePath("../ResultsMonitors/Ramp3Viewport")
+vr_fanno = NodePath("../ResultsMonitors/FannoPropViewport")
+vr_rayleigh = NodePath("../ResultsMonitors/RayleightPropViewport")
+vr_exit = NodePath("../ResultsMonitors/ExitPropViewport")
+vr_perf_exit = NodePath("../ResultsMonitors/PerforrmanceViewport")
+
+[node name="AtmosphericProperties" parent="." unique_id=1428155272 instance=ExtResource("4_n42v5")]
+
+[node name="ResultsMonitors" type="Node3D" parent="." unique_id=28500876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.419842, -0.75860643)
+
+[node name="AtmoPropertiesViewport" parent="ResultsMonitors" unique_id=780571383 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4720085, 0.68093777, -2.9182396)
+screen_size = Vector2(4, 2)
+scene = ExtResource("14_yqqla")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("vr_atmosphere_properties_ui.gd")
+
+[node name="Ramp1Viewport" parent="ResultsMonitors" unique_id=355181377 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9508276, 0.22485256, -2.9902954)
+scene = ExtResource("15_b1u6s")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("vr_ramp_properties.gd")
+
+[node name="Ramp2Viewport" parent="ResultsMonitors" unique_id=1414620701 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.9054785, -1.7567596, -2.9182396)
+scene = ExtResource("16_a0tno")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("vr_ramp_2_properties.gd")
+
+[node name="Ramp3Viewport" parent="ResultsMonitors" unique_id=1221932082 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.892195, -3.7328157, -2.8762865)
+scene = ExtResource("17_qpro7")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("vr_ramp_3_properties.gd")
+
+[node name="FannoPropViewport" parent="ResultsMonitors" unique_id=1492306993 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.0017357, 0.20979309, -2.9182396)
+scene = ExtResource("18_qpro7")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("fanno_properties.gd")
+
+[node name="RayleightPropViewport" parent="ResultsMonitors" unique_id=1722695801 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.989243, -1.7538152, -2.8822098)
+scene = ExtResource("19_mjlxn")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("rayleigh_properties.gd")
+
+[node name="ExitPropViewport" parent="ResultsMonitors" unique_id=150820347 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.009118, -3.760838, -2.9542656)
+scene = ExtResource("20_mjlxn")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("exit_properties.gd")
+
+[node name="PerforrmanceViewport" parent="ResultsMonitors" unique_id=1398066974 instance=ExtResource("1_c0spg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5578976, 0.6577468, -2.9741006)
+screen_size = Vector2(4, 2)
+scene = ExtResource("21_mjlxn")
+viewport_size = Vector2(1152, 648)
+transparent = 1
+scene_properties_keys = PackedStringArray("perfomance_properties.gd")
+
+[node name="VrUser" parent="." unique_id=1561770876 instance=ExtResource("23_4kjy6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2509289, 2.8273463)
+
+[node name="XrInitializer" parent="." unique_id=1922144821 instance=ExtResource("22_38ene")]

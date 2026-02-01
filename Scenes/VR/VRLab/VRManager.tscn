@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cmeixntph8nly"]
+
+[ext_resource type="Script" uid="uid://cjf0ewper1rms" path="res://Scripts/vr_manager.gd" id="1_emxfp"]
+
+[node name="VrManager" type="Node" unique_id=1117102481]
+script = ExtResource("1_emxfp")

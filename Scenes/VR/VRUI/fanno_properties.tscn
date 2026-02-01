@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://dh5nn6ix2gnu7"]
+
+[ext_resource type="Theme" uid="uid://bnr8x3yfeavfk" path="res://Themes/LabelTitles.tres" id="1_t6nck"]
+[ext_resource type="Script" uid="uid://cyjlo0vt24dd3" path="res://Scripts/UI/fanno_properties.gd" id="1_w6kvu"]
+[ext_resource type="Theme" uid="uid://cguww0cl6anij" path="res://Themes/LabelResults.tres" id="2_w6kvu"]
+
+[node name="FannoProperties" type="Control" unique_id=311821927]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_w6kvu")
+
+[node name="Panel" type="Panel" parent="." unique_id=707223998]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 4.0
+offset_right = 1115.0
+offset_bottom = 612.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=39127744]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 465.0
+offset_top = 5.0
+offset_right = 677.0
+offset_bottom = 94.0
+grow_horizontal = 2
+
+[node name="FannoTitleLabel" type="Label" parent="VBoxContainer" unique_id=1820866605]
+layout_mode = 2
+theme = ExtResource("1_t6nck")
+text = "Fanno Flow"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer" unique_id=1329475549]
+layout_mode = 2
+
+[node name="FannoMachLabel" type="Label" parent="VBoxContainer" unique_id=751636527]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoTempLabel" type="Label" parent="VBoxContainer" unique_id=675228866]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoPresLabel" type="Label" parent="VBoxContainer" unique_id=1777830476]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoDensLabel" type="Label" parent="VBoxContainer" unique_id=1476368251]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoStagTempLabel" type="Label" parent="VBoxContainer" unique_id=21474711]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoStagPresLabel" type="Label" parent="VBoxContainer" unique_id=849132466]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1
+
+[node name="FannoFlowVelLabel" type="Label" parent="VBoxContainer" unique_id=83643994]
+layout_mode = 2
+theme = ExtResource("2_w6kvu")
+horizontal_alignment = 1

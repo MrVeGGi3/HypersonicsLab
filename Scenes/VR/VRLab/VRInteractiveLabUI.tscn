@@ -1,7 +1,7 @@
-[gd_scene load_steps=20 format=3 uid="uid://beqftbqir3tcs"]
+[gd_scene format=3 uid="uid://b1h1u5wb7u63"]
 
-[ext_resource type="Script" uid="uid://dnull744voixw" path="res://Scripts/InteractiveUI/altitude_control.gd" id="1_yeeef"]
-[ext_resource type="Texture2D" uid="uid://crujhoamyq0ud" path="res://Images/Hypersonic Height.png" id="2_bfwpy"]
+[ext_resource type="Script" uid="uid://blyhxalrd0qff" path="res://Scripts/UI/vr_interactive_lab_ui.gd" id="1_sw1jr"]
+[ext_resource type="Texture2D" uid="uid://crujhoamyq0ud" path="res://Images/Hypersonic Height.png" id="2_j5q1v"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yb4hy"]
 bg_color = Color(1, 0.3437347, 0.27267864, 1)
@@ -51,134 +51,124 @@ bg_color = Color(0.35080007, 0.6356301, 0.8080489, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g4xo6"]
 bg_color = Color(0.3563873, 0.64063376, 0.77597374, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m0pvm"]
-bg_color = Color(0, 0.68952066, 0.6658644, 1)
-
-[node name="InteractiveLabUi" type="Control" node_paths=PackedStringArray("altitude_slider", "altitude_sbox", "mach_slider", "mach_sbox", "fuel_type", "burn_cp_sbox", "energy_gen")]
+[node name="InteractiveLabUi" type="Control" unique_id=923099367]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yeeef")
-altitude_slider = NodePath("AltitudeControl/AltitudeSlider")
-altitude_sbox = NodePath("AltitudeControl/AltitudeSpinBox")
-mach_slider = NodePath("MachControl/MachSlider")
-mach_sbox = NodePath("MachControl/MachSpinBox")
-fuel_type = NodePath("FuelControl/VBoxContainer/FuelType")
-burn_cp_sbox = NodePath("CPBurnControl/VBoxContainer/CPSpinBox")
-energy_gen = NodePath("EnergyFuelControl/VBoxContainer/Energy")
+script = ExtResource("1_sw1jr")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1693582890]
 layout_mode = 0
 offset_top = -3.0
 offset_right = 1152.0
 offset_bottom = 650.0
 
-[node name="VehicleUI" type="Control" parent="."]
+[node name="VehicleUI" type="Control" parent="." unique_id=1591088173]
 anchors_preset = 0
 offset_left = -7.0
 offset_top = -30.0
 offset_right = 33.0
 offset_bottom = 10.0
 
-[node name="HypersonicImages" type="Control" parent="VehicleUI"]
+[node name="HypersonicImages" type="Control" parent="VehicleUI" unique_id=2065278460]
 anchors_preset = 0
 offset_left = 3.0
 offset_top = 36.0
 offset_right = 43.0
 offset_bottom = 76.0
 
-[node name="HypersonicVehicle" type="TextureRect" parent="VehicleUI/HypersonicImages"]
+[node name="HypersonicVehicle" type="TextureRect" parent="VehicleUI/HypersonicImages" unique_id=1624563680]
 layout_mode = 0
 offset_left = 138.0
 offset_top = 140.0
 offset_right = 2058.0
 offset_bottom = 1220.0
 scale = Vector2(0.52324104, 0.29342708)
-texture = ExtResource("2_bfwpy")
+texture = ExtResource("2_j5q1v")
 
-[node name="ThetasControl" type="Control" parent="VehicleUI"]
+[node name="ThetasControl" type="Control" parent="VehicleUI" unique_id=1097841629]
 anchors_preset = 0
 offset_left = 183.0
 offset_top = 481.0
 offset_right = 223.0
 offset_bottom = 521.0
 
-[node name="ThetasContainer" type="VBoxContainer" parent="VehicleUI/ThetasControl"]
+[node name="ThetasContainer" type="VBoxContainer" parent="VehicleUI/ThetasControl" unique_id=22889109]
 layout_mode = 0
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 88.0
 offset_bottom = 82.0
 
-[node name="Theta1" type="SpinBox" parent="VehicleUI/ThetasControl/ThetasContainer"]
+[node name="Theta1" type="SpinBox" parent="VehicleUI/ThetasControl/ThetasContainer" unique_id=78803481]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_yb4hy")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_7cvu0")
 max_value = 90.0
 step = 0.1
 
-[node name="Theta2" type="SpinBox" parent="VehicleUI/ThetasControl/ThetasContainer"]
+[node name="Theta2" type="SpinBox" parent="VehicleUI/ThetasControl/ThetasContainer" unique_id=1997134969]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_uus7w")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_te0qc")
 max_value = 90.0
 step = 0.1
 
-[node name="LabelsContainer" type="VBoxContainer" parent="VehicleUI/ThetasControl"]
+[node name="LabelsContainer" type="VBoxContainer" parent="VehicleUI/ThetasControl" unique_id=2032343344]
 layout_mode = 0
 offset_left = -45.0
 offset_top = -3.0
 offset_right = -5.0
 offset_bottom = 85.0
 
-[node name="Theta1Label" type="Label" parent="VehicleUI/ThetasControl/LabelsContainer"]
+[node name="Theta1Label" type="Label" parent="VehicleUI/ThetasControl/LabelsContainer" unique_id=2013244495]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "θ1"
 
-[node name="Theta2Label" type="Label" parent="VehicleUI/ThetasControl/LabelsContainer"]
+[node name="Theta2Label" type="Label" parent="VehicleUI/ThetasControl/LabelsContainer" unique_id=519460435]
 layout_mode = 2
 theme_override_font_sizes/font_size = 25
 text = "θ2"
 
-[node name="VehicleWidth" type="Control" parent="VehicleUI"]
+[node name="VehicleWidth" type="Control" parent="VehicleUI" unique_id=938740047]
 anchors_preset = 0
 offset_left = 331.0
 offset_top = 470.0
 offset_right = 371.0
 offset_bottom = 510.0
 
-[node name="VehicleWidthContainer" type="VBoxContainer" parent="VehicleUI/VehicleWidth"]
+[node name="VehicleWidthContainer" type="VBoxContainer" parent="VehicleUI/VehicleWidth" unique_id=1155671544]
 layout_mode = 0
 offset_left = -28.0
 offset_top = 20.0
 offset_right = 78.0
 offset_bottom = 78.0
 
-[node name="SpinBox" type="SpinBox" parent="VehicleUI/VehicleWidth/VehicleWidthContainer"]
+[node name="SpinBox" type="SpinBox" parent="VehicleUI/VehicleWidth/VehicleWidthContainer" unique_id=1712811993]
 layout_mode = 2
 step = 0.1
 alignment = 1
 
-[node name="VehicleLabel" type="Label" parent="VehicleUI/VehicleWidth/VehicleWidthContainer"]
+[node name="VehicleLabel" type="Label" parent="VehicleUI/VehicleWidth/VehicleWidthContainer" unique_id=165050234]
 layout_mode = 2
 text = "Vehicle Width (meters)"
 
-[node name="AltitudeControl" type="Control" parent="."]
+[node name="AltitudeControl" type="Control" parent="." unique_id=571270915]
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Panel" type="Panel" parent="AltitudeControl"]
+[node name="Panel" type="Panel" parent="AltitudeControl" unique_id=1769045525]
 layout_mode = 0
 offset_right = 120.0
 offset_bottom = 650.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cifl")
 
-[node name="AltitudeSlider" type="VSlider" parent="AltitudeControl"]
+[node name="AltitudeSlider" type="VSlider" parent="AltitudeControl" unique_id=2063332442]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 46.0
@@ -187,7 +177,7 @@ offset_bottom = 646.0
 max_value = 85500.0
 step = 50.0
 
-[node name="AltitudeLabel" type="Label" parent="AltitudeControl"]
+[node name="AltitudeLabel" type="Label" parent="AltitudeControl" unique_id=1162446279]
 layout_mode = 0
 offset_left = -195.0
 offset_top = 643.0
@@ -199,7 +189,7 @@ text = "ALTITUDE  (Meters)"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="AltitudeSpinBox" type="SpinBox" parent="AltitudeControl"]
+[node name="AltitudeSpinBox" type="SpinBox" parent="AltitudeControl" unique_id=242773020]
 layout_mode = 0
 offset_left = 6.0
 offset_top = 3.0
@@ -208,14 +198,14 @@ offset_bottom = 34.0
 max_value = 85500.0
 step = 50.0
 
-[node name="HeightControl" type="Control" parent="."]
+[node name="HeightControl" type="Control" parent="." unique_id=616222968]
 anchors_preset = 0
 offset_left = 121.0
 offset_top = 561.0
 offset_right = 161.0
 offset_bottom = 601.0
 
-[node name="Panel" type="Panel" parent="HeightControl"]
+[node name="Panel" type="Panel" parent="HeightControl" unique_id=1982246931]
 layout_mode = 0
 offset_left = -2.0
 offset_top = -30.0
@@ -223,12 +213,12 @@ offset_right = 358.0
 offset_bottom = 90.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_aomy4")
 
-[node name="SpinboxesContainer" type="HBoxContainer" parent="HeightControl"]
+[node name="SpinboxesContainer" type="HBoxContainer" parent="HeightControl" unique_id=2131192103]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="h1" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
+[node name="h1" type="SpinBox" parent="HeightControl/SpinboxesContainer" unique_id=557413584]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_gyn2x")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_227vq")
@@ -236,7 +226,7 @@ max_value = 20.0
 step = 0.0
 alignment = 1
 
-[node name="h2" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
+[node name="h2" type="SpinBox" parent="HeightControl/SpinboxesContainer" unique_id=1134542353]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_1r1b1")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_h1v5s")
@@ -244,7 +234,7 @@ max_value = 20.0
 step = 0.0
 alignment = 1
 
-[node name="h3" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
+[node name="h3" type="SpinBox" parent="HeightControl/SpinboxesContainer" unique_id=1999600891]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_5wgd1")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_uymbp")
@@ -252,7 +242,7 @@ max_value = 20.0
 step = 0.0
 alignment = 1
 
-[node name="OutNozzleHeight" type="SpinBox" parent="HeightControl/SpinboxesContainer"]
+[node name="OutNozzleHeight" type="SpinBox" parent="HeightControl/SpinboxesContainer" unique_id=1491605515]
 layout_mode = 2
 theme_override_styles/up_background = SubResource("StyleBoxFlat_6x065")
 theme_override_styles/down_background_disabled = SubResource("StyleBoxFlat_6f7c2")
@@ -260,38 +250,38 @@ max_value = 10.0
 step = 0.01
 alignment = 1
 
-[node name="LabelsContainer" type="HBoxContainer" parent="HeightControl"]
+[node name="LabelsContainer" type="HBoxContainer" parent="HeightControl" unique_id=863208979]
 layout_mode = 0
 offset_left = -2.0
 offset_top = 51.0
 offset_right = 348.0
 offset_bottom = 91.0
 
-[node name="h1" type="Label" parent="HeightControl/LabelsContainer"]
+[node name="h1" type="Label" parent="HeightControl/LabelsContainer" unique_id=65076081]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "h1"
 horizontal_alignment = 1
 
-[node name="h2" type="Label" parent="HeightControl/LabelsContainer"]
+[node name="h2" type="Label" parent="HeightControl/LabelsContainer" unique_id=4627003]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "h2"
 horizontal_alignment = 1
 
-[node name="h3" type="Label" parent="HeightControl/LabelsContainer"]
+[node name="h3" type="Label" parent="HeightControl/LabelsContainer" unique_id=2123524035]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "h3"
 horizontal_alignment = 1
 
-[node name="he" type="Label" parent="HeightControl/LabelsContainer"]
+[node name="he" type="Label" parent="HeightControl/LabelsContainer" unique_id=2039877201]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "he"
 horizontal_alignment = 1
 
-[node name="Height Title" type="Label" parent="HeightControl"]
+[node name="Height Title" type="Label" parent="HeightControl" unique_id=699926498]
 layout_mode = 0
 offset_left = 103.0
 offset_top = -31.0
@@ -299,14 +289,14 @@ offset_right = 257.0
 offset_bottom = -8.0
 text = "Heights Adjustment"
 
-[node name="FuelControl" type="Control" parent="."]
+[node name="FuelControl" type="Control" parent="." unique_id=1490860389]
 anchors_preset = 0
 offset_left = 424.0
 offset_top = -166.0
 offset_right = 464.0
 offset_bottom = -126.0
 
-[node name="Panel" type="Panel" parent="FuelControl"]
+[node name="Panel" type="Panel" parent="FuelControl" unique_id=172851472]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 170.0
@@ -314,45 +304,45 @@ offset_right = 721.0
 offset_bottom = 230.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_j7qee")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="FuelControl"]
+[node name="VBoxContainer" type="HBoxContainer" parent="FuelControl" unique_id=357155944]
 layout_mode = 0
 offset_left = 108.0
 offset_top = 175.0
 offset_right = 708.0
 offset_bottom = 225.0
 
-[node name="FuelLabel" type="Label" parent="FuelControl/VBoxContainer"]
+[node name="FuelLabel" type="Label" parent="FuelControl/VBoxContainer" unique_id=27514647]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "Fuel Type"
 
-[node name="FuelType" type="OptionButton" parent="FuelControl/VBoxContainer"]
+[node name="FuelType" type="OptionButton" parent="FuelControl/VBoxContainer" unique_id=1482264901]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 alignment = 1
 
-[node name="FuelLabel2" type="Label" parent="FuelControl/VBoxContainer"]
+[node name="FuelLabel2" type="Label" parent="FuelControl/VBoxContainer" unique_id=901971452]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 35
 text = "Friction"
 
-[node name="FrictionSpinBox" type="SpinBox" parent="FuelControl/VBoxContainer"]
+[node name="FrictionSpinBox" type="SpinBox" parent="FuelControl/VBoxContainer" unique_id=909825309]
 layout_mode = 2
 size_flags_horizontal = 3
 max_value = 1.0
 step = 0.001
 
-[node name="MachControl" type="Control" parent="."]
+[node name="MachControl" type="Control" parent="." unique_id=677384309]
 anchors_preset = 0
 offset_left = 119.0
 offset_top = 12.0
 offset_right = 159.0
 offset_bottom = 52.0
 
-[node name="Panel" type="Panel" parent="MachControl"]
+[node name="Panel" type="Panel" parent="MachControl" unique_id=1912639042]
 layout_mode = 0
 offset_left = 1.0
 offset_top = -11.0
@@ -360,7 +350,7 @@ offset_right = 301.0
 offset_bottom = 54.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_g4xo6")
 
-[node name="MachLabel" type="Label" parent="MachControl"]
+[node name="MachLabel" type="Label" parent="MachControl" unique_id=1493695017]
 layout_mode = 0
 offset_left = 6.0
 offset_top = -17.0
@@ -369,7 +359,7 @@ offset_bottom = 18.0
 theme_override_font_sizes/font_size = 30
 text = "Mach Number"
 
-[node name="MachSpinBox" type="SpinBox" parent="MachControl"]
+[node name="MachSpinBox" type="SpinBox" parent="MachControl" unique_id=204229425]
 layout_mode = 0
 offset_left = 214.0
 offset_top = 14.0
@@ -378,7 +368,7 @@ offset_bottom = 45.0
 max_value = 50.0
 step = 0.5
 
-[node name="MachSlider" type="HSlider" parent="MachControl"]
+[node name="MachSlider" type="HSlider" parent="MachControl" unique_id=1034390513]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 24.0
@@ -387,63 +377,54 @@ offset_bottom = 40.0
 max_value = 50.0
 step = 0.01
 
-[node name="CPBurnControl" type="Control" parent="."]
+[node name="CPBurnControl" type="Control" parent="." unique_id=1976042040]
 anchors_preset = 0
 offset_left = 857.0
 offset_top = 73.0
 offset_right = 897.0
 offset_bottom = 113.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CPBurnControl"]
+[node name="VBoxContainer" type="VBoxContainer" parent="CPBurnControl" unique_id=437997794]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="CP" type="Label" parent="CPBurnControl/VBoxContainer"]
+[node name="CP" type="Label" parent="CPBurnControl/VBoxContainer" unique_id=1044105988]
 layout_mode = 2
 text = "Engine Burn CP"
 
-[node name="CpUnitLabel" type="Label" parent="CPBurnControl/VBoxContainer"]
+[node name="CpUnitLabel" type="Label" parent="CPBurnControl/VBoxContainer" unique_id=1225799340]
 layout_mode = 2
 text = "J /Kg K"
 horizontal_alignment = 1
 
-[node name="CPSpinBox" type="SpinBox" parent="CPBurnControl/VBoxContainer"]
+[node name="CPSpinBox" type="SpinBox" parent="CPBurnControl/VBoxContainer" unique_id=589069983]
 layout_mode = 2
 max_value = 5000.0
 step = 0.001
 alignment = 1
 
-[node name="EnergyFuelControl" type="Control" parent="."]
+[node name="EnergyFuelControl" type="Control" parent="." unique_id=201485248]
 anchors_preset = 0
 offset_left = 566.0
 offset_top = 78.0
 offset_right = 606.0
 offset_bottom = 118.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="EnergyFuelControl"]
+[node name="VBoxContainer" type="VBoxContainer" parent="EnergyFuelControl" unique_id=1038268989]
 layout_mode = 0
 offset_left = -15.0
 offset_top = -17.0
 offset_right = 183.0
 offset_bottom = 33.0
 
-[node name="Title" type="Label" parent="EnergyFuelControl/VBoxContainer"]
+[node name="Title" type="Label" parent="EnergyFuelControl/VBoxContainer" unique_id=477537795]
 layout_mode = 2
 text = "⚡Energy Generated by Fuel"
 
-[node name="Energy" type="Label" parent="EnergyFuelControl/VBoxContainer"]
+[node name="Energy" type="Label" parent="EnergyFuelControl/VBoxContainer" unique_id=1196676629]
 layout_mode = 2
-
-[node name="Generate" type="Button" parent="."]
-layout_mode = 0
-offset_left = 852.0
-offset_top = 588.0
-offset_right = 1152.0
-offset_bottom = 651.0
-theme_override_font_sizes/font_size = 40
-theme_override_styles/normal = SubResource("StyleBoxFlat_m0pvm")
-text = "Generate"
+horizontal_alignment = 1
 
 [connection signal="value_changed" from="VehicleUI/ThetasControl/ThetasContainer/Theta1" to="." method="_on_theta_1_value_changed"]
 [connection signal="value_changed" from="VehicleUI/ThetasControl/ThetasContainer/Theta2" to="." method="_on_theta_2_value_changed"]
@@ -460,4 +441,3 @@ text = "Generate"
 [connection signal="value_changed" from="MachControl/MachSpinBox" to="." method="_on_mach_spin_box_value_changed"]
 [connection signal="value_changed" from="MachControl/MachSlider" to="." method="_on_mach_slider_value_changed"]
 [connection signal="value_changed" from="CPBurnControl/VBoxContainer/CPSpinBox" to="." method="_on_cp_spin_box_value_changed"]
-[connection signal="pressed" from="Generate" to="." method="_on_generate_pressed"]
