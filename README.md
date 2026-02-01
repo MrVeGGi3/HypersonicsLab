@@ -1,52 +1,49 @@
 # 🔬 HYPERSONICS LAB
 
 
-Um ambiente de simulação em tempo real desenvolvido na **Godot Engine** para validar conceitos de física avançada, engenharia aeroespacial e termodinâmica de fluidos.
+A real-time simulation environment developed in Godot Engine to validate concepts of advanced physics, aerospace engineering, and fluid thermodynamics.
 
-O objetivo deste laboratório é criar uma biblioteca de componentes físicos reutilizáveis que permitam a prototipagem rápida de sistemas complexos (como motores, aerodinâmica e veículos) com precisão matemática.
+The goal of this laboratory is to create a library of reusable physics components that enable rapid prototyping of complex systems (such as engines, aerodynamics, and vehicles) with mathematical precision.
 
----
-
-## 🧪 Módulo Atual: Propulsão Hipersônica (Scramjet/Ramjet)
+## 🧪 Current Module: Hypersonic Propulsion (Scramjet/Ramjet)
 
 <img width="1625" height="706" alt="ScramjetCFD1D" src="https://github.com/user-attachments/assets/78a2f09f-dd66-4526-ae6f-2c83981c3936" />
 
-O primeiro grande experimento do laboratório foca na simulação de ciclos termodinâmicos para motores a jato sem partes móveis.
+The first major experiment of the lab focuses on the simulation of thermodynamic cycles for jet engines without moving parts.
 
-### O Desafio
-Simular o comportamento de um motor Scramjet do zero, calculando as propriedades do fluxo de ar passo a passo enquanto ele atravessa os componentes do motor.
+### The Challenge
+To simulate the behavior of a Scramjet engine from scratch, calculating airflow properties step-by-step as it traverses the engine components.
 
-### Core Physics Implementada
-Este módulo valida a interação entre três fenômenos fundamentais da dinâmica dos gases:
+### Core Physics Implementation
+This module validates the interaction between three fundamental gas dynamics phenomena:
 
-1.  **Fanno Flow (Atrito):** Simulação de perdas de carga e bloqueio sônico em dutos isoladores.
-2.  **Rayleigh Flow (Combustão):** Adição de calor em fluxo compressível e análise de choque térmico.
-3.  **Escoamento Isentrópico (Bocal):** Expansão de gases e geração de empuxo com bocal de geometria variável.
+1.  **Fanno Flow (Friction):** Simulation of head loss and sonic choking in isolator ducts.
+2.  **Rayleigh Flow (Combustion):** Heat addition in compressible flow and thermal shock analysis.
+3.  **Isentropic Flow (Nozzle):** Gas expansion and thrust generation using variable geometry nozzles.
 
-> **Destaque Técnico:** O solver implementado é híbrido, utilizando métodos de Newton-Raphson para precisão e Bisseção para estabilidade numérica, capaz de lidar com a transição entre regimes subsônicos e supersônicos dinamicamente.
+> **Technical Highlight:** The implemented solver is **hybrid**, utilizing **Newton-Raphson** methods for precision and **Bisection** for numerical stability, capable of dynamically handling the transition between subsonic and supersonic regimes.
+> ---
+
+## 🏗️ Laboratory Architecture
+
+The project was designed with modularity in mind, allowing physics classes to be reused in future experiments:
+
+* **`AtmoProperties`:** Global Singleton for standard atmosphere calculations and real gas properties.
+* **`FluidSolvers`:** Libraries of numerical algorithms (Newton-Raphson, Derivatives) located in the "Calculators" folder, **decoupled** from game logic.
+* **Modular Components:** `RayleighFlow` and `FannoFlow` are Nodes that can be attached to any object in the lab, not just engines.
+
+## 🛠️ Tech Stack & Tools
+
+* **Engine:** Godot 4.x (Typed GDScript)
+* **Physics:** 1D Compressible Fluid Dynamics (CFD-lite)
+* **Future Integration:** Ready for VR/XR (Meta Quest) 
+
+## 🚀 Lab Roadmap
+
+- [x] **Phase 1:** Thermodynamics Core (Scramjet)
+- [ ] **Phase 2:** Trajectory and Control Integration
+- [ ] **Phase 3:** Real-Time Data Visualization (In-Game Plotting)
+- [ ] **Phase 4:** Virtual Reality Test Environment
 
 ---
-
-## 🏗️ Arquitetura do Laboratório
-
-O projeto foi desenhado com modularidade em mente, permitindo que as classes de física sejam reutilizadas em futuros experimentos:
-
-* **`AtmoProperties`:** Singleton global para cálculos de atmosfera padrão e propriedades de gases reais.
-* **`FluidSolvers`:** Bibliotecas de algoritmos numéricos (Newton-Raphson, Derivadas) na pasta "Calculators" desacopladas da lógica do jogo.
-* **Componentes Modulares:** `RayleighFlow` e `FannoFlow` são Nodes que podem ser acoplados a qualquer objeto no laboratório, não apenas motores.
-
-## 🛠️ Tech Stack & Ferramentas
-
-* **Engine:** Godot 4.x (GDScript Tipado)
-* **Física:** Dinâmica de Fluidos Compressíveis 1D (CFD-lite)
-* **Integração Futura:** Preparado para VR/XR (Meta Quest) 
-
-## 🚀 Roadmap do Laboratório
-
-- [x] **Fase 1:** Core de Termodinâmica (Scramjet)
-- [ ] **Fase 2:** Integração de Trajetória e Controle
-- [ ] **Fase 3:** Visualização de Dados em Tempo Real (Gráficos In-Game)
-- [ ] **Fase 4:** Ambiente de Testes em Realidade Virtual
-
----
-*Este repositório é um "work in progress" constante de estudos avançados em engenharia e simulação.*
+*This repository is a constant "work in progress" for advanced studies in engineering and simulation.*
